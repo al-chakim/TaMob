@@ -9,3 +9,8 @@ TextStyle huruf1 = TextStyle(
   color: tiga,
   fontWeight: FontWeight.w700
 );
+
+TextStyle huruf2 = TextStyle(
+  color: empat,
+  fontWeight: FontWeight.w700
+);
