@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:golodors/color.dart';
+import 'icon/my_icon1_icons.dart';
 
 class login extends StatefulWidget {
   const login({Key? key}) : super(key: key);
@@ -160,7 +161,9 @@ class _loginState extends State<login> {
                                 child: Row(
                                   mainAxisAlignment: MainAxisAlignment.center,
                                   children: [
-                                    //Icon(Icons.)
+                                    Text('G', style: huruf2.copyWith(fontSize: 18),),
+                                    //Icon(MyIcon1.google),
+                                    SizedBox(width: 5,),
                                     Text(
                                       'Google',
                                       style: huruf2,
