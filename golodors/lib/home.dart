@@ -50,149 +50,64 @@ class _HomeState extends State<Home> {
             padding: EdgeInsets.all(12),
             child: Row(
               children: [
-                Container(
-                  height: 170,
-                  width: 110,
-                  padding: EdgeInsets.only(left: 0, top: 0),
-                  //margin:
-                      // EdgeInsets.only(right: 20, left: 20, top: 10, bottom: 10),
-                  decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(10), color: satu),
-                  child: Material(
-                    color: Colors.transparent,
-                    child: InkWell(
-                      onTap: () {
-                        // Navigator.push(
-                        //   context, MaterialPageRoute(
-                        //     builder: (context) => Home()
-                        //   )
-                        // );
-                      },
-                      child: Center(
-                        child: Text(
-                          'Login',
-                          style: huruf1.copyWith(fontSize: 17.5, color: empat),
-                        ),
-                      ),
-                    ),
-                  ),
-                ),
+                sleding(teks1:'Jakarta', press: (){}),
                 SizedBox(width: 10,),
-                Container(
-                  height: 170,
-                  width: 110,
-                  padding: EdgeInsets.only(left: 0, top: 0),
-                  //margin:
-                      // EdgeInsets.only(right: 20, left: 20, top: 10, bottom: 10),
-                  decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(10), color: satu),
-                  child: Material(
-                    color: Colors.transparent,
-                    child: InkWell(
-                      onTap: () {
-                        // Navigator.push(
-                        //   context, MaterialPageRoute(
-                        //     builder: (context) => Home()
-                        //   )
-                        // );
-                      },
-                      child: Center(
-                        child: Text(
-                          'Login',
-                          style: huruf1.copyWith(fontSize: 17.5, color: empat),
-                        ),
-                      ),
-                    ),
-                  ),
-                ),
+                sleding(teks1: 'Bogor', press: (){}),
                 SizedBox(width: 10,),
-                Container(
-                  height: 170,
-                  width: 110,
-                  padding: EdgeInsets.only(left: 0, top: 0),
-                  //margin:
-                      // EdgeInsets.only(right: 20, left: 20, top: 10, bottom: 10),
-                  decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(10), color: satu),
-                  child: Material(
-                    color: Colors.transparent,
-                    child: InkWell(
-                      onTap: () {
-                        // Navigator.push(
-                        //   context, MaterialPageRoute(
-                        //     builder: (context) => Home()
-                        //   )
-                        // );
-                      },
-                      child: Center(
-                        child: Text(
-                          'Login',
-                          style: huruf1.copyWith(fontSize: 17.5, color: empat),
-                        ),
-                      ),
-                    ),
-                  ),
-                ),
+                sleding(teks1: 'Depok', press: (){}),
                 SizedBox(width: 10,),
-                Container(
-                  height: 170,
-                  width: 110,
-                  padding: EdgeInsets.only(left: 0, top: 0),
-                  //margin:
-                      // EdgeInsets.only(right: 20, left: 20, top: 10, bottom: 10),
-                  decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(10), color: satu),
-                  child: Material(
-                    color: Colors.transparent,
-                    child: InkWell(
-                      onTap: () {
-                        // Navigator.push(
-                        //   context, MaterialPageRoute(
-                        //     builder: (context) => Home()
-                        //   )
-                        // );
-                      },
-                      child: Center(
-                        child: Text(
-                          'Login',
-                          style: huruf1.copyWith(fontSize: 17.5, color: empat),
-                        ),
-                      ),
-                    ),
-                  ),
-                ),
+                sleding(teks1: 'Tangerang', press: (){}),
                 SizedBox(width: 10,),
-                Container(
-                  height: 170,
-                  width: 110,
-                  padding: EdgeInsets.only(left: 0, top: 0),
-                  //margin:
-                      // EdgeInsets.only(right: 20, left: 20, top: 10, bottom: 10),
-                  decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(10), color: satu),
-                  child: Material(
-                    color: Colors.transparent,
-                    child: InkWell(
-                      onTap: () {
-                        // Navigator.push(
-                        //   context, MaterialPageRoute(
-                        //     builder: (context) => Home()
-                        //   )
-                        // );
-                      },
-                      child: Center(
-                        child: Text(
-                          'Login',
-                          style: huruf1.copyWith(fontSize: 17.5, color: empat),
-                        ),
-                      ),
-                    ),
-                  ),
-                ),
+                sleding(teks1: 'Bekasi', press: (){}),
               ],
             ),
           )
         ],
+      ),
+    );
+  }
+}
+
+class sleding extends StatelessWidget {
+
+  final String teks1;
+  final VoidCallback press;
+  //final String gambar;
+
+  const sleding({
+
+    Key? key,
+
+  required this.teks1,
+  required this.press,
+  //required this.gambar
+
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      height: 170,
+      width: 110,
+      padding: EdgeInsets.only(left: 0, top: 0),
+      //margin:
+          // EdgeInsets.only(right: 20, left: 20, top: 10, bottom: 10),
+      decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(10), color: satu),
+      child: Material(
+        color: Colors.transparent,
+        child: InkWell(
+          onTap: press,
+          child: Column(
+            children: [
+              //Image.asset(gambar),
+              Text(
+                teks1,
+                style: huruf1.copyWith(fontSize: 17.5, color: empat),
+              ),
+            ],
+          ),
+        ),
       ),
     );
   }
