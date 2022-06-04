@@ -40,11 +40,7 @@ class _mulaiState extends State<mulai> {
               //padding: EdgeInsets.only(left: 20, top: 6),
               margin: EdgeInsets.only(right: 20, left: 20, top: 10, bottom: 10),
               decoration: BoxDecoration(
-                  borderRadius: BorderRadius.only(
-                      topRight: Radius.circular(50),
-                      topLeft: Radius.circular(8),
-                      bottomLeft: Radius.circular(50),
-                      bottomRight: Radius.circular(8)),
+                  borderRadius: BorderRadius.circular(15),
                   color: dua),
               child: Material(
                 color: Colors.transparent,
@@ -68,11 +64,7 @@ class _mulaiState extends State<mulai> {
               //padding: EdgeInsets.only(left: 20, top: 6),
               margin: EdgeInsets.only(right: 20, left: 20, top: 10, bottom: 10),
               decoration: BoxDecoration(
-                  borderRadius: BorderRadius.only(
-                      topRight: Radius.circular(8),
-                      topLeft: Radius.circular(50),
-                      bottomLeft: Radius.circular(8),
-                      bottomRight: Radius.circular(50)),
+                  borderRadius: BorderRadius.circular(15),
                   color: tiga),
               child: Material(
                 color: Colors.transparent,

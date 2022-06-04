@@ -194,7 +194,8 @@ class _loginState extends State<login> {
                     onPressed: () {},
                     child: Text(
                       'Forgot Password?',
-                      style: huruf2.copyWith(fontWeight: FontWeight.w500),
+                      style: huruf2.copyWith(
+                          fontWeight: FontWeight.w500, color: Colors.black54),
                     )),
                 // SizedBox(
                 //   height: 10,
@@ -226,12 +227,17 @@ class _loginState extends State<login> {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    Text('Don`t have an account?'),
+                    Text(
+                      'Don`t have an account?',
+                      style: huruf1.copyWith(color: Colors.black54),
+                    ),
                     TextButton(
                         onPressed: () {},
                         child: Text(
                           'SIGN UP',
-                          style: huruf2.copyWith(fontWeight: FontWeight.w500),
+                          style: huruf2.copyWith(
+                              fontWeight: FontWeight.w500,
+                              color: Colors.black87),
                         ))
                   ],
                 )
