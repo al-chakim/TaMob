@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:golodors/color.dart';
+import 'package:golodors/home.dart';
 import 'package:golodors/icon/ikon_icons.dart';
 
 class login extends StatefulWidget {
@@ -211,7 +212,13 @@ class _loginState extends State<login> {
                   child: Material(
                     color: Colors.transparent,
                     child: InkWell(
-                      onTap: () {},
+                      onTap: () {
+                        Navigator.push(
+                          context, MaterialPageRoute(
+                            builder: (context) => Home()
+                          )
+                        );
+                      },
                       child: Center(
                         child: Text(
                           'Login',
@@ -232,13 +239,14 @@ class _loginState extends State<login> {
                       style: huruf1.copyWith(color: Colors.black54),
                     ),
                     TextButton(
-                        onPressed: () {},
-                        child: Text(
-                          'SIGN UP',
-                          style: huruf2.copyWith(
-                              fontWeight: FontWeight.w500,
-                              color: Colors.black87),
-                        ))
+                      onPressed: () {},
+                      child: Text(
+                        'SIGN UP',
+                        style: huruf2.copyWith(
+                          fontWeight: FontWeight.w500,
+                          color: Colors.black87),
+                      )
+                    )
                   ],
                 )
               ],
