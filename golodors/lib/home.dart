@@ -9,106 +9,76 @@ class Home extends StatefulWidget {
 }
 
 class _HomeState extends State<Home> {
+  int selectedCity = 0;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Column(
-        children: [
-          SizedBox(
-            height: 50,
-          ),
-          Padding(
-            padding: const EdgeInsets.only(left: 20),
-            child: Row(
-              children: [
-                Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Text(
-                      'Find The Accomodation',
-                      style: huruf2.copyWith(fontSize: 20),
-                    ),
-                    Text('Of Your Choice',
-                        style: huruf2.copyWith(fontSize: 25)),
-                    SizedBox(
-                      height: 30,
-                    ),
-                    Text(
-                      'City choice',
-                      style: huruf2.copyWith(
-                        fontSize: 17, 
-                        fontWeight: FontWeight.w400
-                      ),
-                    )
-                  ],
-                ),
-              ],
+      backgroundColor: tiga,
+      appBar: AppBar(
+        backgroundColor: tiga,
+        automaticallyImplyLeading: false,
+        //elevation: 0,
+        title: Row(
+          children: [
+            Padding(
+              padding: EdgeInsets.only(left: 0),
+              child: CircleAvatar(
+                radius: 25,
+                backgroundImage: AssetImage('assets/profile.jpg'),
+              ),
             ),
-          ),
-          SingleChildScrollView(
-            scrollDirection: Axis.horizontal,
-            padding: EdgeInsets.all(12),
-            child: Row(
-              children: [
-                sleding(teks1:'Jakarta', press: (){}),
-                SizedBox(width: 10,),
-                sleding(teks1: 'Bogor', press: (){}),
-                SizedBox(width: 10,),
-                sleding(teks1: 'Depok', press: (){}),
-                SizedBox(width: 10,),
-                sleding(teks1: 'Tangerang', press: (){}),
-                SizedBox(width: 10,),
-                sleding(teks1: 'Bekasi', press: (){}),
-              ],
-            ),
+            SizedBox(width: 10,),
+            Text('Chakim', style: huruf2.copyWith(fontWeight: FontWeight.w500, fontSize: 18))
+          ],
+        ),
+        actions: [
+          IconButton(
+            onPressed: (){
+              Navigator.pop(context);
+            }, 
+            icon: Icon(
+              Icons.logout_rounded, 
+              color: Colors.black,
+            )
           )
         ],
       ),
-    );
-  }
-}
 
-class sleding extends StatelessWidget {
-
-  final String teks1;
-  final VoidCallback press;
-  //final String gambar;
-
-  const sleding({
-
-    Key? key,
-
-  required this.teks1,
-  required this.press,
-  //required this.gambar
-
-  }) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      height: 170,
-      width: 110,
-      padding: EdgeInsets.only(left: 0, top: 0),
-      //margin:
-          // EdgeInsets.only(right: 20, left: 20, top: 10, bottom: 10),
-      decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(10), color: satu),
-      child: Material(
-        color: Colors.transparent,
-        child: InkWell(
-          onTap: press,
+      body: ListView(children: [
+        SizedBox(
+          height: 10,
+        ),
+        Padding(
+          padding: const EdgeInsets.only(left: 15),
           child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              //Image.asset(gambar),
               Text(
-                teks1,
-                style: huruf1.copyWith(fontSize: 17.5, color: empat),
+                'Booking',
+                style: huruf2.copyWith(fontSize: 30),
               ),
+              Text(
+                'Place',
+                style: huruf2.copyWith(
+                    fontSize: 23,
+                    fontWeight: FontWeight.w500,
+                    color: Color.fromARGB(133, 0, 0, 0)),
+              )
             ],
           ),
         ),
-      ),
+        SizedBox(
+          height: 20,
+        ),
+        Padding(
+          padding: const EdgeInsets.only(left: 15),
+          child: Text(
+            'Cities',
+            style: huruf2.copyWith(fontWeight: FontWeight.w600),
+          ),
+        )
+      ]),
     );
   }
 }

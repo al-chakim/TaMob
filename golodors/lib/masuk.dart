@@ -105,6 +105,7 @@ class _loginState extends State<login> {
                                   Icon(
                                     Ikon.google,
                                     size: 18,
+                                    color: Colors.green,
                                   ),
                                   SizedBox(
                                     width: 5,
